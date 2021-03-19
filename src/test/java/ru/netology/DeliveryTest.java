@@ -21,10 +21,10 @@ public class DeliveryTest {
     void testWithFullyValidData() {
         open("http://localhost:9999/");
         SelenideElement form = $("[action='/']");
-        form.$("[data-test-id='city'] input").setValue("Грязь");
+        form.$("[data-test-id='city'] input").setValue("Москва");
         form.$("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         form.$("[data-test-id='date'] input").setValue(deliveryDay(5));
-        form.$("[data-test-id='name'] input").setValue("Пугачёва Алла");
+        form.$("[data-test-id='name'] input").setValue("Пугачева Алла");
         form.$("[data-test-id='phone'] input").setValue("+79874561232");
         form.$("[data-test-id='agreement']").click();
         form.$(".button__content").click();
